@@ -17,7 +17,6 @@ def generatePDF(alumno, dni, fecha_inicio, fecha_fin, docente1, docente2, docent
     packet = io.BytesIO()
     # Fonts with epecific path
     pdfmetrics.registerFont(TTFont('arial','arial.ttf'))
-    pdfmetrics.registerFont(TTFont('arial_bd','arial_bold.ttf'))
 
     c = canvas.Canvas(packet, letter)
 
@@ -88,4 +87,4 @@ for i in range (1, hoja.nrows):
     
     generatePDF(alumno, dni, fecha_inicio, fecha_fin, docente1, docente2, docente3)
 print("Documentos generados correctamente")    
-#input()
+input()
